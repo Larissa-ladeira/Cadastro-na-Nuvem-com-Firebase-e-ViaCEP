@@ -1,0 +1,121 @@
+body {
+    background-color: #f0f2f5;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Container principal com a borda, sombra e cantos arredondados */
+.card-container {
+    background-color: #fff;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px; /* Largura máxima para desktop */
+    margin: 20px; /* Margem para telas menores */
+    box-sizing: border-box;
+}
+
+.card-title {
+    text-align: center;
+    color: #444;
+    font-weight: 600;
+    margin-top: 1em;
+    margin-bottom: 2rem;
+}
+
+/* Layout dos campos de entrada */
+.input-row {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.input-group label {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+.input-group input:focus {
+    border-color: #725CF0;
+    box-shadow: 0 0 0 3px rgba(114, 92, 240, 0.2);
+}
+
+.input-group input[disabled] {
+    background-color: #eee;
+    color: #888;
+    cursor: not-allowed;
+}
+
+.input-row .input-group:nth-child(1) input[disabled] {
+    /* Estilo para a rua */
+    border-color: #725CF0;
+    box-shadow: 0 0 0 3px rgba(114, 92, 240, 0.2);
+}
+
+/* Estilo do botão */
+.btn-submit {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #725CF0;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 1rem;
+}
+
+.btn-submit:hover {
+    background-color: #5d48c0;
+    transform: translateY(-2px);
+}
+
+/* Responsividade */
+@media (max-width: 500px) {
+    .input-row {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .card-container {
+        padding: 2rem;
+    }
+}
+
+/* Estilo para a mensagem de sucesso */
+.success-message {
+    background-color: #28a745;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Classe para esconder a mensagem */
+.hidden {
+    display: none;
+    opacity: 0;
+}
